@@ -24,9 +24,11 @@
 	function Home(homeService) {
 		/*jshint validthis: true */
 		var vm = this;
-		vm.title = "Hello, state-manager!";
+		vm.title = "State Manager";
 		vm.version = "1.0.0";
 		vm.listFeatures = homeService.getFeaturesList();
+		vm.statusAll = "All Systems Operational";
+		vm.lastUpdated = "Updated a few seconds ago";
 
 		homeService.fetchData()
 			.then(function(response) {
