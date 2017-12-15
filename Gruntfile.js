@@ -119,6 +119,7 @@ module.exports = function (grunt) {
 						'app/app.config.js',
 						'app/**/*Module.js',
 						'app/**/*Route.js',
+						'app/assets/css/**/*.css',
 						'app/**/*Ctrl.js',
 						'app/**/*Service.js',
 						'app/**/*Directive.js'
