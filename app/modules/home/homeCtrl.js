@@ -28,6 +28,9 @@
 		vm.version = "1.0.0";
 		vm.listFeatures = homeService.getFeaturesList();
 
+		homeService.fetchData()
+			.then(function(response) {
+				vm.greeting = response.data;
+			});
 	}
-
 })();

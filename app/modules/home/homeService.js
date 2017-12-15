@@ -30,13 +30,16 @@
 		];
 
 		return {
-			getFeaturesList: getFeaturesList
+			getFeaturesList: getFeaturesList,
+			fetchData: fetchData
 		};
 
 		function getFeaturesList() {
 			return list;
 		}
 
+		function fetchData() {
+			return $http.get('http://rest-service.guides.spring.io/greeting');
+		}
 	}
-
 })();
