@@ -2,13 +2,13 @@
 	'use strict';
 
 	/**
-	* @ngdoc index
-	* @name app
-	* @description
-	* # app
-	*
-	* Main module of the application.
-	*/
+	 * @ngdoc index
+	 * @name app
+	 * @description
+	 * # app
+	 *
+	 * Main modules of the application.
+	 */
 
 	angular.module('state-manager', [
 		'ngResource',
@@ -16,13 +16,13 @@
 		 'ui.bootstrap',
 		 'ngMaterial',
 		'ngMdIcons',
-		'ngMessages',
 		'ngCookies',
 		'ngAnimate',
 		'ngTouch',
 		'ngSanitize',
 		'ui.router',
 		'home',
+		'administration',
 	]);
 
 })();
