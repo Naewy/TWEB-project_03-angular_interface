@@ -1,8 +1,8 @@
 <div class="md-padding" flex layout-sm="column">
-    <md-card class="text-center">
-        <md-card-content>
-            <h1>{{ vm.title }}</h1>
-            <h3>{{ vm.version }}</h3>
+	<md-card class="text-center">
+		<md-card-content>
+			<h1>{{ vm.title }}</h1>
+			<h3>{{ vm.version }}</h3>
 
 			<div id="status_top_box">
 
@@ -11,7 +11,7 @@
 				</div>
 
 				<div id="last_updated">
-					{{vm.lastUpdated}}
+					Updated {{vm.lastUpdated}} seconds ago
 				</div>
 
 			</div>
@@ -19,29 +19,36 @@
 
 			<div id="overview">
 				<div id="active_incidents">
-					<div class="big">12</div>
+					<div class="big">{{vm.activeIncidents}}</div>
 					<div class="label">Active incidents</div>
 				</div>
 
 				<div id="active_maintenance">
-					<div class="big">31</div>
+					<div class="big">{{vm.activeMaintenances}}</div>
 					<div class="label">Active maintenances</div>
 				</div>
 
 				<div id="days_since_last_incident">
-					<div class="big">0</div>
+					<div class="big">{{vm.daysSinceLastIncident}}</div>
 					<div class="label">Days since last incident</div>
 				</div>
 			</div>
 
-
-			<div class="service">
-				lol
+			<div ng-repeat="service in vm.services">
+				<div class="service">
+					<div class="sub_service">
+						<div class="service_name">{{service.name}}</div>
+						<div class="service_status_down">{{service.state}}</div>
+					</div>
+					<div class="sub_service">
+						<div class="service_info">Contact name : {{service.contact}}</div>
+						<div class="service_info">Self : {{service.self}}</div>
+						<div class="service_info">Status address : {{service.statusAddress}}</div>
+						<div class="service_info">Description : {{service.description}}</div>
+					</div>
+				</div>
 			</div>
-			<div class="service">
-				tano
-			</div>
 
-        </md-card-content>
-    </md-card>
+		</md-card-content>
+	</md-card>
 </div>
