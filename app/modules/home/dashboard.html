@@ -4,10 +4,16 @@
 			<h1>{{ vm.title }}</h1>
 			<h3>{{ vm.version }}</h3>
 
-			<div id="status_top_box">
-
+			<div ng-class="vm.statusAll">
 				<div id="status">
-					{{vm.statusAll}}
+					<div ng-switch="vm.statusAll">
+						<div ng-switch-when="all_good">
+							All services up and running
+						</div>
+						<div ng-switch-when="all_error">
+							Some services are down or under maintenance
+						</div>
+					</div>
 				</div>
 
 				<div id="last_updated">
@@ -19,8 +25,8 @@
 
 			<div id="overview">
 				<div id="active_incidents">
-					<div class="big">{{vm.activeIncidents}}</div>
-					<div class="label">Active incidents</div>
+					<div class="big">{{vm.downService}}</div>
+					<div class="label">Down Services</div>
 				</div>
 
 				<div id="active_maintenance">
@@ -37,7 +43,9 @@
 				<div class="service">
 					<div class="sub_service">
 						<div class="service_name">{{service.name}}</div>
-						<div class="service_status_operational">{{service.state}}</div>
+						<div ng-class="service.state">
+							{{service.state}}
+						</div>
 					</div>
 					<div class="sub_service">
 						<div class="service_info">Contact name : {{service.contact}}</div>

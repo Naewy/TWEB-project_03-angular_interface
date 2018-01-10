@@ -7,6 +7,24 @@
 	border-radius: 5px;
 }
 
+.all_good {
+	width: 80%;
+	margin: auto;
+	height: 20px;
+	background-color: #27AE60;
+	padding: 15px;
+	border-radius: 5px;
+}
+
+.all_error {
+	width: 80%;
+	margin: auto;
+	height: 20px;
+	background-color: #ae0100;
+	padding: 15px;
+	border-radius: 5px;
+}
+
 h1, h3 {
 	color: #D8D9D9;
 }
@@ -91,24 +109,6 @@ md-card {
 	font-size: 20px;
 }
 
-.service_status_operational {
-	color: #27AE60;
-	float: right;
-	font-weight: bold;
-}
-
-.service_status_maintenance {
-	color: orange;
-	float: right;
-	font-weight: bold;
-}
-
-.service_status_down {
-	color: red;
-	float: right;
-	font-weight: bold;
-}
-
 .service_info {
 	display: block;
 	color: #D8D9D9;
@@ -116,3 +116,20 @@ md-card {
 	margin-left: 20px;
 }
 
+.up {
+	color: #27AE60;
+	float: right;
+	font-weight: bold;
+}
+
+.maintenance {
+	color: orange;
+	float: right;
+	font-weight: bold;
+}
+
+.down {
+	color: red;
+	float: right;
+	font-weight: bold;
+}
