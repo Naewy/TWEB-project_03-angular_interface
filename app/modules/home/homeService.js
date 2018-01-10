@@ -16,7 +16,7 @@
 
 	function homeService($http) {
 
-		var baseUrl = 'http://rest-service.guides.spring.io/greeting';
+		let baseUrl = 'http://localhost:8080/api/services';
 
 		function fetchData() {
 			return $http.get(baseUrl);

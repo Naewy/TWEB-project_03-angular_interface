@@ -24,13 +24,13 @@
 	function Home(homeService, $interval) {
 		/*jshint validthis: true */
 		var vm = this;
-		vm.updateDataFrequency = 5000;
+		vm.updateDataFrequency = 10000;
 		vm.updateTimerFrequency = 1000;
 		vm.title = "State Manager";
 		vm.version = "1.0.0";
 		vm.lastUpdated = 0;
 		vm.daysSinceLastIncident = "-";
-		vm.services = [
+	/*	vm.services = [
 			{
 				"self":"https://docs.angularjs.org/api/ng/directive/ngRepeat",
 				"name":"MySQL",
@@ -47,14 +47,13 @@
 				"description":"Lol SSH ",
 				"contact":"Alain Hardy"
 			}
-		];
+		];*/
 
 		// Function used to get new data and update the page (automatically)
 		let updateData = () => {
 			homeService.fetchData()
 			.then(function(response) {
-				vm.greeting = response.data;
-				// vm.services = response.data;
+				vm.services = response.data;
 
 				vm.activeMaintenances = vm.services.filter((item) => {return item.state === "maintenance"}).length;
 				vm.downService = vm.services.filter((item) => {return item.state === "down"}).length;
@@ -64,6 +63,10 @@
 
 				console.log("Data fetched");
 				vm.lastUpdated = 0;
+			}, function(error) {
+				vm.statusAll = "all_error";
+				vm.activeMaintenances = 0;
+				vm.downService = 0;
 			});
 		};
 
