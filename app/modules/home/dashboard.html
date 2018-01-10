@@ -33,12 +33,11 @@
 					<div class="label">Days since last incident</div>
 				</div>
 			</div>
-
 			<div ng-repeat="service in vm.services">
 				<div class="service">
 					<div class="sub_service">
 						<div class="service_name">{{service.name}}</div>
-						<div class="service_status_down">{{service.state}}</div>
+						<div class="service_status_operational">{{service.state}}</div>
 					</div>
 					<div class="sub_service">
 						<div class="service_info">Contact name : {{service.contact}}</div>
@@ -48,7 +47,6 @@
 					</div>
 				</div>
 			</div>
-
 		</md-card-content>
 	</md-card>
 </div>
