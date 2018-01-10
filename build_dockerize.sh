@@ -13,9 +13,9 @@ if [ $result -eq 0 ]
 then
 	printf "\033[0;32mBuild successful\n\033[0m"
 
-	mkdir angular
-	cp -r app/ angular
-	cp index.html angular
+	mkdir -p angular/data
+	cp -r app/ angular/data
+	cp index.html angular/data
 
 	touch angular/Dockerfile
 	echo "FROM httpd:2.2" >> angular/Dockerfile
