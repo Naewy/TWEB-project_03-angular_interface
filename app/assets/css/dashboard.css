@@ -25,6 +25,15 @@
 	border-radius: 5px;
 }
 
+.all_error_api {
+	width: 80%;
+	margin: auto;
+	height: 20px;
+	background-color: #ae0100;
+	padding: 15px;
+	border-radius: 5px;
+}
+
 h1, h3 {
 	color: #D8D9D9;
 }
