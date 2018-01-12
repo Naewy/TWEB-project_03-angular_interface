@@ -1,5 +1,5 @@
 /*!
-* state-manager - v0.0.1 - MIT LICENSE 2018-01-10. 
+* state-manager - v0.0.1 - MIT LICENSE 2018-01-12. 
 * @author HEIG-VD - Chatelan, Chauffoureaux, Hardy
 */
 (function() {
@@ -256,6 +256,7 @@ angular.module('state-manager')
 				vm.statusAll = "all_error_api";
 				vm.activeMaintenances = 0;
 				vm.downService = 0;
+				vm.upService = 0;
 			});
 		};
 

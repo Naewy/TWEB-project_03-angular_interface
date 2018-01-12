@@ -22,7 +22,6 @@
 				<div id="last_updated">
 					Updated {{vm.lastUpdated}} seconds ago
 				</div>
-
 			</div>
 
 
@@ -38,8 +37,8 @@
 				</div>
 
 				<div id="days_since_last_incident">
-					<div class="big">{{vm.daysSinceLastIncident}}</div>
-					<div class="label">Days since last incident</div>
+					<div class="big">{{vm.upService}}</div>
+					<div class="label">Up Services</div>
 				</div>
 			</div>
 			<div ng-repeat="service in vm.services">
@@ -53,7 +52,7 @@
 					<div class="sub_service">
 						<div class="service_info">Contact name : {{service.contact}}</div>
 						<div class="service_info">Self : {{service.self}}</div>
-						<div class="service_info">Status address : {{service.statusAddress}}</div>
+						<div class="service_info">Status address : {{service.statusAddress}}:{{service.statusPort}}</div>
 						<div class="service_info">Description : {{service.description}}</div>
 					</div>
 				</div>

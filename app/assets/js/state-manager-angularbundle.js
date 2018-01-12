@@ -1,5 +1,5 @@
 /*!
-* state-manager - v0.0.1 - MIT LICENSE 2018-01-10. 
+* state-manager - v0.0.1 - MIT LICENSE 2018-01-12. 
 * @author HEIG-VD - Chatelan, Chauffoureaux, Hardy
 */
 /**

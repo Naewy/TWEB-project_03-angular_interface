@@ -58,6 +58,7 @@
 
 				vm.activeMaintenances = vm.services.filter((item) => {return item.state === "maintenance"}).length;
 				vm.downService = vm.services.filter((item) => {return item.state === "down"}).length;
+				vm.upService = vm.services.filter((item) => {return item.state === "up"}).length;
 
 				vm.statusAll = !(vm.activeMaintenances || vm.downService);
 				vm.statusAll = vm.statusAll ? "all_good" : "all_error";
@@ -68,6 +69,7 @@
 				vm.statusAll = "all_error_api";
 				vm.activeMaintenances = 0;
 				vm.downService = 0;
+				vm.upService = 0;
 			});
 		};
 

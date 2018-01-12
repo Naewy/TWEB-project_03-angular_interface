@@ -16,7 +16,7 @@ angular.module('state-manager').run(['$templateCache', function($templateCache) 
     "<div class=\"md-padding\" flex layout-sm=\"column\">\n" +
     "	<md-card class=\"text-center\">\n" +
     "		<md-card-content>\n" +
-    "			<h1>{{ vm.title }}</h1>\n" +
+    "			<h1>{{ vm.title }}x</h1>\n" +
     "			<h3>{{ vm.version }}</h3>\n" +
     "\n" +
     "			<div ng-class=\"vm.statusAll\">\n" +
@@ -54,7 +54,7 @@ angular.module('state-manager').run(['$templateCache', function($templateCache) 
     "\n" +
     "				<div id=\"days_since_last_incident\">\n" +
     "					<div class=\"big\">{{vm.daysSinceLastIncident}}</div>\n" +
-    "					<div class=\"label\">Days since last incident</div>\n" +
+    "					<div class=\"label\">Days212</div>\n" +
     "				</div>\n" +
     "			</div>\n" +
     "			<div ng-repeat=\"service in vm.services\">\n" +
