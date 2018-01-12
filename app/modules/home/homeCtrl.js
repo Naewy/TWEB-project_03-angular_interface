@@ -67,9 +67,9 @@
 				vm.lastUpdated = 0;
 			}, function(error) {
 				vm.statusAll = "all_error_api";
-				vm.activeMaintenances = 0;
-				vm.downService = 0;
-				vm.upService = 0;
+				vm.activeMaintenances = "-";
+				vm.downService = "-";
+				vm.upService = "-";
 			});
 		};
 

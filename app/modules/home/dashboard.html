@@ -52,8 +52,14 @@
 					<div class="sub_service">
 						<div class="service_info">Contact name : {{service.contact}}</div>
 						<div class="service_info">Self : {{service.self}}</div>
-						<div class="service_info">Status address : {{service.statusAddress}}:{{service.statusPort}}</div>
-						<div class="service_info">Description : {{service.description}}</div>
+						<div class="service_info">URL : {{service.statusAddress}}</div>
+						<div class="service_info">Port : {{service.statusPort}}</div>
+						<div ng-if="service.statusAddress && service.statusPort">
+							<div class="service_info">Automatically checked : true</div>
+						</div>
+						<div ng-if="!(service.statusAddress && service.statusPort)">
+							<div class="service_info">Automatically checked : false</div>
+						</div>
 					</div>
 				</div>
 			</div>
