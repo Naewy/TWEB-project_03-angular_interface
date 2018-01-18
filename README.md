@@ -26,7 +26,7 @@ Lastly, a list of every services is displayed with their status and some useful 
 - The possible port of the service
 - Whether or not the status is automatically updated.
 
-![User Interface](/home/newt/cours/TWEB/labo/angular_js/UI.jpg  "User Interface")
+![User Interface](https://github.com/Naewy/TWEB-project_03-angular_interface/blob/master/UI.jpg  "User Interface")
 
 ## How does it work ##
 With this default configuration, if an URL and a port is given, our application will automatically try to establish a TCP connection with the service every 20 seconds to test it's status. If either the port or the URL are not given, they won't be automatically checked. This allow a client to choose to develop a simple checker for his service with a higher check rate than the 20 seconds configured  and push the status to the api. The only fixed delay is the refresh rate of the page (set to 10 seconds here).
