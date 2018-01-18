@@ -29,8 +29,6 @@
 		vm.title = "State Manager";
 		vm.version = "1.0.0";
 		vm.lastUpdated = 0;
-		vm.daysSinceLastIncident = "-";
-		vm.accumulator = 0;
 
 		// Function used to get new data and update the page (automatically)
 		let updateData = () => {
