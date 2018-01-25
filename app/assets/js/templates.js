@@ -16,7 +16,7 @@ angular.module('state-manager').run(['$templateCache', function($templateCache) 
     "<div class=\"md-padding\" flex layout-sm=\"column\">\n" +
     "	<md-card class=\"text-center\">\n" +
     "		<md-card-content>\n" +
-    "			<h1>{{ vm.title }}x</h1>\n" +
+    "			<h1>{{ vm.title }}</h1>\n" +
     "			<h3>{{ vm.version }}</h3>\n" +
     "\n" +
     "			<div ng-class=\"vm.statusAll\">\n" +
@@ -37,7 +37,6 @@ angular.module('state-manager').run(['$templateCache', function($templateCache) 
     "				<div id=\"last_updated\">\n" +
     "					Updated {{vm.lastUpdated}} seconds ago\n" +
     "				</div>\n" +
-    "\n" +
     "			</div>\n" +
     "\n" +
     "\n" +
@@ -53,8 +52,8 @@ angular.module('state-manager').run(['$templateCache', function($templateCache) 
     "				</div>\n" +
     "\n" +
     "				<div id=\"days_since_last_incident\">\n" +
-    "					<div class=\"big\">{{vm.daysSinceLastIncident}}</div>\n" +
-    "					<div class=\"label\">Days212</div>\n" +
+    "					<div class=\"big\">{{vm.upService}}</div>\n" +
+    "					<div class=\"label\">Up Services</div>\n" +
     "				</div>\n" +
     "			</div>\n" +
     "			<div ng-repeat=\"service in vm.services\">\n" +
@@ -68,8 +67,14 @@ angular.module('state-manager').run(['$templateCache', function($templateCache) 
     "					<div class=\"sub_service\">\n" +
     "						<div class=\"service_info\">Contact name : {{service.contact}}</div>\n" +
     "						<div class=\"service_info\">Self : {{service.self}}</div>\n" +
-    "						<div class=\"service_info\">Status address : {{service.statusAddress}}</div>\n" +
-    "						<div class=\"service_info\">Description : {{service.description}}</div>\n" +
+    "						<div class=\"service_info\">URL : {{service.statusAddress}}</div>\n" +
+    "						<div class=\"service_info\">Port : {{service.statusPort}}</div>\n" +
+    "						<div ng-if=\"service.statusAddress && service.statusPort\">\n" +
+    "							<div class=\"service_info\">Automatically checked : true</div>\n" +
+    "						</div>\n" +
+    "						<div ng-if=\"!(service.statusAddress && service.statusPort)\">\n" +
+    "							<div class=\"service_info\">Automatically checked : false</div>\n" +
+    "						</div>\n" +
     "					</div>\n" +
     "				</div>\n" +
     "			</div>\n" +

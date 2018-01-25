@@ -1,5 +1,5 @@
 /*!
-* state-manager - v0.0.1 - MIT LICENSE 2018-01-12. 
+* state-manager - v0.0.1 - MIT LICENSE 2018-01-25. 
 * @author HEIG-VD - Chatelan, Chauffoureaux, Hardy
 */
 (function() {
@@ -217,26 +217,6 @@ angular.module('state-manager')
 		vm.title = "State Manager";
 		vm.version = "1.0.0";
 		vm.lastUpdated = 0;
-		vm.daysSinceLastIncident = "-";
-		vm.accumulator = 0;
-	/*	vm.services = [
-			{
-				"self":"https://docs.angularjs.org/api/ng/directive/ngRepeat",
-				"name":"MySQL",
-				"state":"up",
-				"statusAddress":"https://docs.angularjs.org/api/ng/directive/ngRepeat/234",
-				"description":"MySQL database",
-				"contact":"Matthieu Chatelan"
-			},
-			{
-				"self":"https://docs.angularjs.org/api/ng/directive/ngRepeat/234",
-				"name":"SSH",
-				"state":"up",
-				"statusAddress":"https://docs.angularjs.org/api/ng/directive/ngRepeatasdsda",
-				"description":"Lol SSH ",
-				"contact":"Alain Hardy"
-			}
-		];*/
 
 		// Function used to get new data and update the page (automatically)
 		let updateData = () => {
@@ -246,6 +226,7 @@ angular.module('state-manager')
 
 				vm.activeMaintenances = vm.services.filter((item) => {return item.state === "maintenance"}).length;
 				vm.downService = vm.services.filter((item) => {return item.state === "down"}).length;
+				vm.upService = vm.services.filter((item) => {return item.state === "up"}).length;
 
 				vm.statusAll = !(vm.activeMaintenances || vm.downService);
 				vm.statusAll = vm.statusAll ? "all_good" : "all_error";
@@ -254,9 +235,9 @@ angular.module('state-manager')
 				vm.lastUpdated = 0;
 			}, function(error) {
 				vm.statusAll = "all_error_api";
-				vm.activeMaintenances = 0;
-				vm.downService = 0;
-				vm.upService = 0;
+				vm.activeMaintenances = "-";
+				vm.downService = "-";
+				vm.upService = "-";
 			});
 		};
 
@@ -524,6 +505,7 @@ angular.module('state-manager')
 		};
 	}
 })();
+
 
 (function() {
 	'use strict';
