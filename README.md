@@ -39,7 +39,7 @@ Every 10 seconds, the display is refreshed and up-to-date information are displa
 
 In order to test the full architecture, It's strongly recommended to pull this repository https://github.com/PestaKit/microservice-status and to perform a "docker-compose up --build" in the docker folder.
 
-###Developpement team ###
+### Developpement team ###
 
 Matthieu Chatelan : https://github.com/Newtt
 Lara Chauffoureaux : https://github.com/Naewy
