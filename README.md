@@ -41,11 +41,9 @@ In order to test the full architecture, It's strongly recommended to pull this r
 
 ### Developpement team ###
 
-Matthieu Chatelan : https://github.com/Newtt
-
-Lara Chauffoureaux : https://github.com/Naewy
-
-Alain Hardy : https://github.com/AlainHardy
+* Matthieu Chatelan : https://github.com/Newtt
+* Lara Chauffoureaux : https://github.com/Naewy
+* Alain Hardy : https://github.com/AlainHardy
 
 ### Sources
 
